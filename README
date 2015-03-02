@@ -1,0 +1,41 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=5124
+
+https://github.com/alx741/vinfo
+
+Vinfo is a Vim plugin that allows you to read Info documentation files right inside a Vim session in a Vim-help fashioned way or from a shell just the way you normally use Info.
+
+
+Usage
+=====
+
+Vinfo can be used right inside a Vim session or from a shell using an alias.
+
+Use inside Vim
+--------------------
+
+You can use Vinfo inside Vim with:
+
+:Vinfo doc
+
+Where doc is the Info documentation to read.
+
+Example: Read Glibc Info documentation
+
+:Vinfo libc
+
+Use outside Vim
+----------------------
+
+When your are not inside a Vim session but in the shell prompt you can invoke Vinfo as a command by using the following shell script:
+
+    #! /bin/sh
+    vim -c \"Vinfo $1\" -c &#039only&#039
+
+Save it in /usr/bin/ as a file named vinfo, give it execution permission with:
+
+$ chmod +x /usr/bin/vinfo
+
+Then from your shell you can read a DOC with:
+
+$ vinfo doc
+
